@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned and deduplicated customer data from RAW.CUSTOMERS_RAW. Handles NULL defaults, email normalization, and date parsing."
+    columns:
+      - name: CUSTOMER_ID
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMER_NAME
+        description: "Customer full name. Defaults to 'Unknown' if missing."
+        tests:
+          - not_null
+      - name: EMAIL
+        description: "Lowercase normalized email. NULL if not provided."
+      - name: CUSTOMER_TIER
+        description: "Customer tier level. Defaults to 'Unknown' if missing."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Gold', 'Silver', 'Bronze', 'Platinum', 'Unknown']
+
+  - name: stg_orders
+    description: "Cleaned order data from RAW.ORDERS_RAW. Currency symbols stripped, dates parsed, statuses normalized to lowercase."
+    columns:
+      - name: ORDER_ID
+        description: "Unique order identifier"
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMER_ID
+        description: "Foreign key to stg_customers"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: CUSTOMER_ID
+      - name: ORDER_DATE
+        description: "Parsed order date"
+        tests:
+          - not_null
+      - name: TOTAL_AMOUNT
+        description: "Order total with currency symbols removed and cast to numeric"
+        tests:
+          - not_null
+      - name: ORDER_STATUS
+        description: "Lowercase normalized order status"
+        tests:
+          - accepted_values:
+              values: ['delivered', 'shipped', 'pending', 'cancelled', 'returned']

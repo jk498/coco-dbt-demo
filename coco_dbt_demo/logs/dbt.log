@@ -1,0 +1,1488 @@
+[0m19:58:13.503026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b17fb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1d6390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1d5450>]}
+
+
+============================== 19:58:13.506631 | 133b17f7-8575-490a-a712-34abe9827b84 ==============================
+[0m19:58:13.506631 [info ] [MainThread]: Running with dbt=1.11.6
+[0m19:58:13.506963 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'no_print': 'None', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'use_colors': 'True', 'printer_width': '80', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'write_json': 'True', 'debug': 'False', 'target_path': 'None', 'log_format': 'default', 'profiles_dir': '.', 'invocation_command': 'dbt debug --profiles-dir .', 'log_cache_events': 'False', 'quiet': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager'}
+[0m19:58:13.518982 [info ] [MainThread]: dbt version: 1.11.6
+[0m19:58:13.519225 [info ] [MainThread]: python version: 3.11.9
+[0m19:58:13.519362 [info ] [MainThread]: python path: /opt/miniconda3/bin/python
+[0m19:58:13.519475 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m19:58:15.435730 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:58:15.436071 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:58:15.436238 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:58:15.492580 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m19:58:15.494532 [info ] [MainThread]: Using profiles dir at .
+[0m19:58:15.494698 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m19:58:15.494807 [info ] [MainThread]: Using dbt_project.yml file at /Users/jkadakia/coco_dbt_demo/dbt_project.yml
+[0m19:58:15.495415 [info ] [MainThread]: adapter type: snowflake
+[0m19:58:15.495558 [info ] [MainThread]: adapter version: 1.11.2
+[0m19:58:15.534014 [info ] [MainThread]: Configuration:
+[0m19:58:15.534302 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:58:15.534429 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:58:15.534527 [info ] [MainThread]: Required dependencies:
+[0m19:58:15.534814 [debug] [MainThread]: Executing "git --help"
+[0m19:58:15.571830 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:58:15.572310 [debug] [MainThread]: STDERR: "b''"
+[0m19:58:15.572455 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:58:15.572587 [info ] [MainThread]: Connection:
+[0m19:58:15.572736 [info ] [MainThread]:   account: SFPSCOGS-JKADAKIA-AZ-DEMO
+[0m19:58:15.572833 [info ] [MainThread]:   user: JKADAKIA
+[0m19:58:15.572922 [info ] [MainThread]:   database: COCO_DBT_DEMO
+[0m19:58:15.573011 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m19:58:15.573098 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m19:58:15.573182 [info ] [MainThread]:   schema: ANALYTICS
+[0m19:58:15.573269 [info ] [MainThread]:   authenticator: externalbrowser
+[0m19:58:15.573358 [info ] [MainThread]:   oauth_client_id: None
+[0m19:58:15.573448 [info ] [MainThread]:   query_tag: None
+[0m19:58:15.573537 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:58:15.573622 [info ] [MainThread]:   host: None
+[0m19:58:15.573707 [info ] [MainThread]:   port: None
+[0m19:58:15.573790 [info ] [MainThread]:   proxy_host: None
+[0m19:58:15.573874 [info ] [MainThread]:   proxy_port: None
+[0m19:58:15.573953 [info ] [MainThread]:   protocol: None
+[0m19:58:15.574035 [info ] [MainThread]:   connect_retries: 1
+[0m19:58:15.574114 [info ] [MainThread]:   connect_timeout: None
+[0m19:58:15.574194 [info ] [MainThread]:   retry_on_database_errors: False
+[0m19:58:15.574276 [info ] [MainThread]:   retry_all: False
+[0m19:58:15.574355 [info ] [MainThread]:   insecure_mode: False
+[0m19:58:15.574438 [info ] [MainThread]:   reuse_connections: True
+[0m19:58:15.574518 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m19:58:15.574602 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m19:58:15.574853 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m19:58:15.623313 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:58:15.675013 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:58:15.675216 [debug] [MainThread]: On debug: select 1 as id
+[0m19:58:15.675323 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:58:16.501612 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m19:58:16.501886 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m19:58:16.502098 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:58:16.502276 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:58:16.502426 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  390190 (08001): Failed to connect to DB: SFPSCOGS-JKADAKIA-AZ-DEMO.snowflakecomputing.com:443, There was an error related to the SAML Identity Provider account parameter. Contact Snowflake support.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:58:16.727431 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 3.4480288, "process_in_blocks": "0", "process_kernel_time": 2.624741, "process_mem_max_rss": "228999168", "process_out_blocks": "0", "process_user_time": 1.679265}
+[0m19:58:16.727864 [debug] [MainThread]: Command `dbt debug` failed at 19:58:16.727787 after 3.45 seconds
+[0m19:58:16.728078 [debug] [MainThread]: Connection 'debug' was left open.
+[0m19:58:16.728181 [debug] [MainThread]: On debug: No close available on handle
+[0m19:58:16.728311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b184890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1cce10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b16fa10>]}
+[0m19:58:16.728471 [debug] [MainThread]: Flushing usage events
+[0m19:58:16.981660 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:59:09.129757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a294c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a9d9450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a9f3550>]}
+
+
+============================== 19:59:09.132295 | fdbfa363-58a6-47ef-9064-b162b172a529 ==============================
+[0m19:59:09.132295 [info ] [MainThread]: Running with dbt=1.11.6
+[0m19:59:09.132574 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_colors': 'True', 'write_json': 'True', 'profiles_dir': '.', 'debug': 'False', 'printer_width': '80', 'static_parser': 'True', 'quiet': 'False', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'empty': 'None', 'log_cache_events': 'False', 'invocation_command': 'dbt debug --profiles-dir .', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'indirect_selection': 'eager'}
+[0m19:59:09.139709 [info ] [MainThread]: dbt version: 1.11.6
+[0m19:59:09.139894 [info ] [MainThread]: python version: 3.11.9
+[0m19:59:09.140021 [info ] [MainThread]: python path: /opt/miniconda3/bin/python
+[0m19:59:09.140125 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m19:59:09.798990 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:59:09.799255 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:59:09.799386 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:59:09.850120 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m19:59:09.852771 [info ] [MainThread]: Using profiles dir at .
+[0m19:59:09.852973 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m19:59:09.853107 [info ] [MainThread]: Using dbt_project.yml file at /Users/jkadakia/coco_dbt_demo/dbt_project.yml
+[0m19:59:09.853460 [info ] [MainThread]: adapter type: snowflake
+[0m19:59:09.853608 [info ] [MainThread]: adapter version: 1.11.2
+[0m19:59:09.887496 [info ] [MainThread]: Configuration:
+[0m19:59:09.887746 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:59:09.887857 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:59:09.887955 [info ] [MainThread]: Required dependencies:
+[0m19:59:09.888216 [debug] [MainThread]: Executing "git --help"
+[0m19:59:09.925072 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:59:09.925543 [debug] [MainThread]: STDERR: "b''"
+[0m19:59:09.925685 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:59:09.925832 [info ] [MainThread]: Connection:
+[0m19:59:09.925976 [info ] [MainThread]:   account: SFPSCOGS-JKADAKIA-AZ-DEMO
+[0m19:59:09.926076 [info ] [MainThread]:   user: JKADAKIA
+[0m19:59:09.926165 [info ] [MainThread]:   database: COCO_DBT_DEMO
+[0m19:59:09.926259 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m19:59:09.926345 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m19:59:09.926432 [info ] [MainThread]:   schema: ANALYTICS
+[0m19:59:09.926519 [info ] [MainThread]:   authenticator: oauth
+[0m19:59:09.926614 [info ] [MainThread]:   oauth_client_id: None
+[0m19:59:09.926703 [info ] [MainThread]:   query_tag: None
+[0m19:59:09.926791 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:59:09.926890 [info ] [MainThread]:   host: None
+[0m19:59:09.926974 [info ] [MainThread]:   port: None
+[0m19:59:09.927060 [info ] [MainThread]:   proxy_host: None
+[0m19:59:09.927149 [info ] [MainThread]:   proxy_port: None
+[0m19:59:09.927232 [info ] [MainThread]:   protocol: None
+[0m19:59:09.927317 [info ] [MainThread]:   connect_retries: 1
+[0m19:59:09.927400 [info ] [MainThread]:   connect_timeout: None
+[0m19:59:09.927485 [info ] [MainThread]:   retry_on_database_errors: False
+[0m19:59:09.927569 [info ] [MainThread]:   retry_all: False
+[0m19:59:09.927649 [info ] [MainThread]:   insecure_mode: False
+[0m19:59:09.927736 [info ] [MainThread]:   reuse_connections: True
+[0m19:59:09.927822 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m19:59:09.927911 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m19:59:09.928139 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m19:59:09.976831 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:59:10.021977 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:59:10.022177 [debug] [MainThread]: On debug: select 1 as id
+[0m19:59:10.022285 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:59:10.702810 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m19:59:10.703164 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m19:59:10.703420 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:59:10.703628 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:59:10.703814 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB: SFPSCOGS-JKADAKIA-AZ-DEMO.snowflakecomputing.com:443. Invalid OAuth access token. [df61c2b2-f7f4-4b3c-9c47-18c56953e5e0]
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:59:10.708095 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.6379085, "process_in_blocks": "0", "process_kernel_time": 2.761443, "process_mem_max_rss": "223985664", "process_out_blocks": "0", "process_user_time": 1.49936}
+[0m19:59:10.708412 [debug] [MainThread]: Command `dbt debug` failed at 19:59:10.708348 after 1.64 seconds
+[0m19:59:10.708620 [debug] [MainThread]: Connection 'debug' was left open.
+[0m19:59:10.708779 [debug] [MainThread]: On debug: No close available on handle
+[0m19:59:10.708980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a984890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b543b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105303290>]}
+[0m19:59:10.709236 [debug] [MainThread]: Flushing usage events
+[0m19:59:10.965627 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:59:35.207239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d7eb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106df1950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106df2d10>]}
+
+
+============================== 19:59:35.209829 | 29266934-94c1-4318-a9b7-c3286fec782b ==============================
+[0m19:59:35.209829 [info ] [MainThread]: Running with dbt=1.11.6
+[0m19:59:35.210085 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'debug': 'False', 'partial_parse': 'True', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'static_parser': 'True', 'use_colors': 'True', 'warn_error': 'None', 'introspect': 'True', 'log_cache_events': 'False', 'profiles_dir': '.', 'printer_width': '80', 'invocation_command': 'dbt debug --profiles-dir .', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'write_json': 'True'}
+[0m19:59:35.220690 [info ] [MainThread]: dbt version: 1.11.6
+[0m19:59:35.220889 [info ] [MainThread]: python version: 3.11.9
+[0m19:59:35.221009 [info ] [MainThread]: python path: /opt/miniconda3/bin/python
+[0m19:59:35.221114 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m19:59:35.867412 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:59:35.867710 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:59:35.867853 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:59:35.928471 [warn ] [MainThread]:  adapter: The token parameter was set, but the authenticator was not set to 'oauth' or 'jwt'.
+[0m19:59:35.928802 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m19:59:35.931233 [info ] [MainThread]: Using profiles dir at .
+[0m19:59:35.931366 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m19:59:35.931485 [info ] [MainThread]: Using dbt_project.yml file at /Users/jkadakia/coco_dbt_demo/dbt_project.yml
+[0m19:59:35.931985 [info ] [MainThread]: adapter type: snowflake
+[0m19:59:35.932133 [info ] [MainThread]: adapter version: 1.11.2
+[0m19:59:35.969803 [info ] [MainThread]: Configuration:
+[0m19:59:35.970038 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:59:35.970154 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:59:35.970255 [info ] [MainThread]: Required dependencies:
+[0m19:59:35.970459 [debug] [MainThread]: Executing "git --help"
+[0m19:59:36.050403 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:59:36.050915 [debug] [MainThread]: STDERR: "b''"
+[0m19:59:36.051069 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:59:36.051208 [info ] [MainThread]: Connection:
+[0m19:59:36.051361 [info ] [MainThread]:   account: SFPSCOGS-JKADAKIA-AZ-DEMO
+[0m19:59:36.051464 [info ] [MainThread]:   user: JKADAKIA
+[0m19:59:36.051568 [info ] [MainThread]:   database: COCO_DBT_DEMO
+[0m19:59:36.051669 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m19:59:36.051764 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m19:59:36.051864 [info ] [MainThread]:   schema: ANALYTICS
+[0m19:59:36.051958 [info ] [MainThread]:   authenticator: programmatic_access_token
+[0m19:59:36.052057 [info ] [MainThread]:   oauth_client_id: None
+[0m19:59:36.052165 [info ] [MainThread]:   query_tag: None
+[0m19:59:36.052260 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:59:36.052354 [info ] [MainThread]:   host: None
+[0m19:59:36.052448 [info ] [MainThread]:   port: None
+[0m19:59:36.052547 [info ] [MainThread]:   proxy_host: None
+[0m19:59:36.052639 [info ] [MainThread]:   proxy_port: None
+[0m19:59:36.052730 [info ] [MainThread]:   protocol: None
+[0m19:59:36.052822 [info ] [MainThread]:   connect_retries: 1
+[0m19:59:36.052913 [info ] [MainThread]:   connect_timeout: None
+[0m19:59:36.053006 [info ] [MainThread]:   retry_on_database_errors: False
+[0m19:59:36.053099 [info ] [MainThread]:   retry_all: False
+[0m19:59:36.053191 [info ] [MainThread]:   insecure_mode: False
+[0m19:59:36.053280 [info ] [MainThread]:   reuse_connections: True
+[0m19:59:36.053375 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m19:59:36.053466 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m19:59:36.053746 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m19:59:36.107064 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:59:36.146937 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:59:36.147146 [debug] [MainThread]: On debug: select 1 as id
+[0m19:59:36.147265 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:59:36.861588 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m19:59:36.861844 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m19:59:36.862009 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:59:36.862143 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:59:36.862268 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB: SFPSCOGS-JKADAKIA-AZ-DEMO.snowflakecomputing.com:443. Programmatic access token is invalid.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:59:36.865140 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.7028906, "process_in_blocks": "0", "process_kernel_time": 2.818051, "process_mem_max_rss": "224444416", "process_out_blocks": "0", "process_user_time": 1.39881}
+[0m19:59:36.865350 [debug] [MainThread]: Command `dbt debug` failed at 19:59:36.865306 after 1.70 seconds
+[0m19:59:36.865503 [debug] [MainThread]: Connection 'debug' was left open.
+[0m19:59:36.865605 [debug] [MainThread]: On debug: No close available on handle
+[0m19:59:36.865734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100c978d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16d7dfb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b98990>]}
+[0m19:59:36.865906 [debug] [MainThread]: Flushing usage events
+[0m19:59:37.108936 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:00:03.586352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10817f650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10816edd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081f2f10>]}
+
+
+============================== 20:00:03.588269 | 0ed2d0ae-4c4e-4fb8-b954-cf8b13137f1c ==============================
+[0m20:00:03.588269 [info ] [MainThread]: Running with dbt=1.11.6
+[0m20:00:03.588537 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'partial_parse': 'True', 'fail_fast': 'False', 'printer_width': '80', 'no_print': 'None', 'empty': 'None', 'introspect': 'True', 'use_colors': 'True', 'debug': 'False', 'quiet': 'False', 'warn_error': 'None', 'invocation_command': 'dbt debug --profiles-dir .', 'static_parser': 'True', 'version_check': 'True', 'write_json': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'log_format': 'default'}
+[0m20:00:03.595072 [info ] [MainThread]: dbt version: 1.11.6
+[0m20:00:03.595255 [info ] [MainThread]: python version: 3.11.9
+[0m20:00:03.595380 [info ] [MainThread]: python path: /opt/miniconda3/bin/python
+[0m20:00:03.595485 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m20:00:04.155741 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:00:04.155985 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:00:04.156117 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:00:04.206355 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m20:00:04.208897 [info ] [MainThread]: Using profiles dir at .
+[0m20:00:04.209064 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m20:00:04.209176 [info ] [MainThread]: Using dbt_project.yml file at /Users/jkadakia/coco_dbt_demo/dbt_project.yml
+[0m20:00:04.209528 [info ] [MainThread]: adapter type: snowflake
+[0m20:00:04.209634 [info ] [MainThread]: adapter version: 1.11.2
+[0m20:00:04.243305 [info ] [MainThread]: Configuration:
+[0m20:00:04.243519 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:00:04.243642 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:00:04.243749 [info ] [MainThread]: Required dependencies:
+[0m20:00:04.243991 [debug] [MainThread]: Executing "git --help"
+[0m20:00:04.276976 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:00:04.277457 [debug] [MainThread]: STDERR: "b''"
+[0m20:00:04.277609 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:00:04.277759 [info ] [MainThread]: Connection:
+[0m20:00:04.277917 [info ] [MainThread]:   account: SFPSCOGS-JKADAKIA-AZ-DEMO
+[0m20:00:04.278029 [info ] [MainThread]:   user: JKADAKIA
+[0m20:00:04.278129 [info ] [MainThread]:   database: COCO_DBT_DEMO
+[0m20:00:04.278236 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m20:00:04.278334 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m20:00:04.278432 [info ] [MainThread]:   schema: ANALYTICS
+[0m20:00:04.278529 [info ] [MainThread]:   authenticator: None
+[0m20:00:04.278627 [info ] [MainThread]:   oauth_client_id: None
+[0m20:00:04.278725 [info ] [MainThread]:   query_tag: None
+[0m20:00:04.278824 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:00:04.278921 [info ] [MainThread]:   host: None
+[0m20:00:04.279013 [info ] [MainThread]:   port: None
+[0m20:00:04.279109 [info ] [MainThread]:   proxy_host: None
+[0m20:00:04.279202 [info ] [MainThread]:   proxy_port: None
+[0m20:00:04.279301 [info ] [MainThread]:   protocol: None
+[0m20:00:04.279396 [info ] [MainThread]:   connect_retries: 1
+[0m20:00:04.279488 [info ] [MainThread]:   connect_timeout: None
+[0m20:00:04.279584 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:00:04.279677 [info ] [MainThread]:   retry_all: False
+[0m20:00:04.279770 [info ] [MainThread]:   insecure_mode: False
+[0m20:00:04.279863 [info ] [MainThread]:   reuse_connections: True
+[0m20:00:04.279955 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m20:00:04.280050 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m20:00:04.280310 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m20:00:04.325070 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:00:04.366898 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:00:04.367075 [debug] [MainThread]: On debug: select 1 as id
+[0m20:00:04.367179 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:00:06.271810 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.905 seconds
+[0m20:00:06.272352 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:00:06.272514 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:00:06.274980 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 2.7306876, "process_in_blocks": "0", "process_kernel_time": 2.776428, "process_mem_max_rss": "224608256", "process_out_blocks": "0", "process_user_time": 1.441608}
+[0m20:00:06.275258 [debug] [MainThread]: Command `dbt debug` succeeded at 20:00:06.275204 after 2.73 seconds
+[0m20:00:06.275417 [debug] [MainThread]: Connection 'debug' was left open.
+[0m20:00:06.275518 [debug] [MainThread]: On debug: Close
+[0m20:00:06.771821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f98990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10816ead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x168008ad0>]}
+[0m20:00:06.772133 [debug] [MainThread]: Flushing usage events
+[0m20:00:07.041076 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:01:53.837311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11377ff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113498cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1137d9450>]}
+
+
+============================== 20:01:53.839919 | 39038ffb-f3ac-4486-9bf2-a7e98f13b29e ==============================
+[0m20:01:53.839919 [info ] [MainThread]: Running with dbt=1.11.6
+[0m20:01:53.840185 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'quiet': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'log_cache_events': 'False', 'write_json': 'True', 'use_colors': 'True', 'target_path': 'None', 'partial_parse': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'empty': 'False', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'cache_selected_only': 'False', 'printer_width': '80', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'static_parser': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None'}
+[0m20:01:54.493437 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:01:54.493750 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:01:54.493884 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:01:54.515071 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m20:01:54.634538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x168f77bd0>]}
+[0m20:01:54.656109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111aaf410>]}
+[0m20:01:54.656845 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m20:01:54.712022 [debug] [MainThread]: checksum: ec27062d18352e9cfca161c166fcc73d2201661a23a3cf3c89196a27f32cfcb8, vars: {}, profile: , target: , version: 1.11.6
+[0m20:01:54.712600 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:01:54.712758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x168f61450>]}
+[0m20:01:55.171178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1694d7d90>]}
+[0m20:01:55.198037 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jkadakia/coco_dbt_demo/target/manifest.json
+[0m20:01:55.199795 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jkadakia/coco_dbt_demo/target/semantic_manifest.json
+[0m20:01:55.215611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16974de90>]}
+[0m20:01:55.215890 [info ] [MainThread]: Found 3 models, 2 sources, 522 macros
+[0m20:01:55.216047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16940e950>]}
+[0m20:01:55.216839 [info ] [MainThread]: 
+[0m20:01:55.216983 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:01:55.217079 [info ] [MainThread]: 
+[0m20:01:55.217258 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:01:55.219093 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DBT_DEMO'
+[0m20:01:55.268649 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DBT_DEMO"
+[0m20:01:55.268869 [debug] [ThreadPool]: On list_COCO_DBT_DEMO: show terse schemas in database COCO_DBT_DEMO
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "connection_name": "list_COCO_DBT_DEMO"} */
+[0m20:01:55.268986 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:01:56.534432 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.265 seconds
+[0m20:01:56.535972 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_COCO_DBT_DEMO, now create_COCO_DBT_DEMO_ANALYTICS_ANALYTICS)
+[0m20:01:56.536334 [debug] [ThreadPool]: Creating schema "database: "COCO_DBT_DEMO"
+schema: "ANALYTICS_ANALYTICS"
+"
+[0m20:01:56.539515 [debug] [ThreadPool]: Using snowflake connection "create_COCO_DBT_DEMO_ANALYTICS_ANALYTICS"
+[0m20:01:56.539777 [debug] [ThreadPool]: On create_COCO_DBT_DEMO_ANALYTICS_ANALYTICS: create schema if not exists COCO_DBT_DEMO.ANALYTICS_ANALYTICS
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "connection_name": "create_COCO_DBT_DEMO_ANALYTICS_ANALYTICS"} */
+[0m20:01:56.910060 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.370 seconds
+[0m20:01:56.911256 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_COCO_DBT_DEMO_ANALYTICS_ANALYTICS, now list_COCO_DBT_DEMO_ANALYTICS_ANALYTICS)
+[0m20:01:56.917093 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DBT_DEMO_ANALYTICS_ANALYTICS"
+[0m20:01:56.917287 [debug] [ThreadPool]: On list_COCO_DBT_DEMO_ANALYTICS_ANALYTICS: show objects in COCO_DBT_DEMO.ANALYTICS_ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "connection_name": "list_COCO_DBT_DEMO_ANALYTICS_ANALYTICS"} */;
+[0m20:01:57.549265 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.632 seconds
+[0m20:01:57.550480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16957f0d0>]}
+[0m20:01:57.553273 [debug] [Thread-2 (]: Began running node model.coco_dbt_demo.stg_customers
+[0m20:01:57.553525 [debug] [Thread-3 (]: Began running node model.coco_dbt_demo.stg_orders
+[0m20:01:57.553892 [info ] [Thread-2 (]: 1 of 3 START sql view model ANALYTICS_ANALYTICS.stg_customers .................. [RUN]
+[0m20:01:57.554168 [info ] [Thread-3 (]: 2 of 3 START sql view model ANALYTICS_ANALYTICS.stg_orders ..................... [RUN]
+[0m20:01:57.554470 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DBT_DEMO_ANALYTICS_ANALYTICS, now model.coco_dbt_demo.stg_customers)
+[0m20:01:57.554756 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.coco_dbt_demo.stg_orders'
+[0m20:01:57.554958 [debug] [Thread-2 (]: Began compiling node model.coco_dbt_demo.stg_customers
+[0m20:01:57.555139 [debug] [Thread-3 (]: Began compiling node model.coco_dbt_demo.stg_orders
+[0m20:01:57.559334 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt_demo.stg_customers"
+[0m20:01:57.560825 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt_demo.stg_orders"
+[0m20:01:57.564334 [debug] [Thread-3 (]: Began executing node model.coco_dbt_demo.stg_orders
+[0m20:01:57.564492 [debug] [Thread-2 (]: Began executing node model.coco_dbt_demo.stg_customers
+[0m20:01:57.577168 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt_demo.stg_orders"
+[0m20:01:57.578651 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt_demo.stg_customers"
+[0m20:01:57.581641 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt_demo.stg_customers"
+[0m20:01:57.582077 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt_demo.stg_orders"
+[0m20:01:57.582276 [debug] [Thread-2 (]: On model.coco_dbt_demo.stg_customers: create or replace   view COCO_DBT_DEMO.ANALYTICS_ANALYTICS.stg_customers
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM COCO_DBT_DEMO.RAW.CUSTOMERS_RAW
+),
+
+deduplicated AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY CUSTOMER_ID
+            ORDER BY CREATED_AT DESC
+        ) AS row_num
+    FROM source
+),
+
+cleaned AS (
+    SELECT
+        CUSTOMER_ID,
+        CASE
+            WHEN CUSTOMER_NAME IS NULL OR TRIM(CUSTOMER_NAME) = '' THEN 'Unknown'
+            ELSE TRIM(CUSTOMER_NAME)
+        END AS CUSTOMER_NAME,
+        CASE
+            WHEN EMAIL IS NULL OR TRIM(EMAIL) = '' THEN NULL
+            ELSE LOWER(TRIM(EMAIL))
+        END AS EMAIL,
+        CASE
+            WHEN PHONE IS NULL OR TRIM(PHONE) = '' THEN NULL
+            ELSE TRIM(PHONE)
+        END AS PHONE,
+        CASE
+            WHEN ADDRESS IS NULL OR TRIM(ADDRESS) = '' THEN NULL
+            ELSE TRIM(ADDRESS)
+        END AS ADDRESS,
+        TRIM(CITY) AS CITY,
+        TRIM(STATE) AS STATE,
+        TRY_TO_DATE(SIGNUP_DATE) AS SIGNUP_DATE,
+        COALESCE(CUSTOMER_TIER, 'Unknown') AS CUSTOMER_TIER,
+        TRY_TO_TIMESTAMP(CREATED_AT) AS CREATED_AT,
+        TRY_TO_TIMESTAMP(UPDATED_AT) AS UPDATED_AT
+    FROM deduplicated
+    WHERE row_num = 1
+)
+
+SELECT * FROM cleaned
+  )
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "model.coco_dbt_demo.stg_customers"} */;
+[0m20:01:57.582497 [debug] [Thread-3 (]: On model.coco_dbt_demo.stg_orders: create or replace   view COCO_DBT_DEMO.ANALYTICS_ANALYTICS.stg_orders
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM COCO_DBT_DEMO.RAW.ORDERS_RAW
+),
+
+cleaned AS (
+    SELECT
+        ORDER_ID,
+        CUSTOMER_ID,
+        TRY_TO_DATE(ORDER_DATE) AS ORDER_DATE,
+        TRIM(PRODUCT_NAME) AS PRODUCT_NAME,
+        TRY_CAST(QUANTITY AS NUMBER) AS QUANTITY,
+        TRY_CAST(UNIT_PRICE AS NUMBER(12, 2)) AS UNIT_PRICE,
+        TRY_CAST(REPLACE(TOTAL_AMOUNT, '$', '') AS NUMBER(12, 2)) AS TOTAL_AMOUNT,
+        LOWER(TRIM(STATUS)) AS ORDER_STATUS,
+        LOWER(TRIM(SHIPPING_METHOD)) AS SHIPPING_METHOD,
+        TRY_TO_TIMESTAMP(CREATED_AT) AS CREATED_AT
+    FROM source
+)
+
+SELECT * FROM cleaned
+  )
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "model.coco_dbt_demo.stg_orders"} */;
+[0m20:01:57.582825 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:01:58.776295 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.194 seconds
+[0m20:01:58.787980 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16970bd50>]}
+[0m20:01:58.788399 [info ] [Thread-2 (]: 1 of 3 OK created sql view model ANALYTICS_ANALYTICS.stg_customers ............. [[32mSUCCESS 1[0m in 1.23s]
+[0m20:01:58.788671 [debug] [Thread-2 (]: Finished running node model.coco_dbt_demo.stg_customers
+[0m20:01:59.030037 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.447 seconds
+[0m20:01:59.031226 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x319032fd0>]}
+[0m20:01:59.031562 [info ] [Thread-3 (]: 2 of 3 OK created sql view model ANALYTICS_ANALYTICS.stg_orders ................ [[32mSUCCESS 1[0m in 1.48s]
+[0m20:01:59.031832 [debug] [Thread-3 (]: Finished running node model.coco_dbt_demo.stg_orders
+[0m20:01:59.032184 [debug] [Thread-5 (]: Began running node model.coco_dbt_demo.fct_customer_orders
+[0m20:01:59.032536 [info ] [Thread-5 (]: 3 of 3 START sql table model ANALYTICS_ANALYTICS.fct_customer_orders ........... [RUN]
+[0m20:01:59.032792 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt_demo.fct_customer_orders'
+[0m20:01:59.032959 [debug] [Thread-5 (]: Began compiling node model.coco_dbt_demo.fct_customer_orders
+[0m20:01:59.034673 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt_demo.fct_customer_orders"
+[0m20:01:59.036741 [debug] [Thread-5 (]: Began executing node model.coco_dbt_demo.fct_customer_orders
+[0m20:01:59.047327 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt_demo.fct_customer_orders"
+[0m20:01:59.049112 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt_demo.fct_customer_orders"
+[0m20:01:59.049316 [debug] [Thread-5 (]: On model.coco_dbt_demo.fct_customer_orders: create or replace transient table COCO_DBT_DEMO.ANALYTICS_ANALYTICS.fct_customer_orders
+    
+    
+    
+    as (WITH customers AS (
+    SELECT * FROM COCO_DBT_DEMO.ANALYTICS_ANALYTICS.stg_customers
+),
+
+orders AS (
+    SELECT * FROM COCO_DBT_DEMO.ANALYTICS_ANALYTICS.stg_orders
+),
+
+customer_orders AS (
+    SELECT
+        c.CUSTOMER_ID,
+        c.CUSTOMER_NAME,
+        c.EMAIL,
+        c.CITY,
+        c.STATE,
+        c.CUSTOMER_TIER,
+        c.SIGNUP_DATE,
+        COUNT(o.ORDER_ID) AS TOTAL_ORDERS,
+        SUM(CASE WHEN o.ORDER_STATUS = 'delivered' THEN 1 ELSE 0 END) AS DELIVERED_ORDERS,
+        SUM(CASE WHEN o.ORDER_STATUS = 'cancelled' THEN 1 ELSE 0 END) AS CANCELLED_ORDERS,
+        SUM(CASE WHEN o.ORDER_STATUS = 'returned' THEN 1 ELSE 0 END) AS RETURNED_ORDERS,
+        COALESCE(SUM(o.TOTAL_AMOUNT), 0) AS LIFETIME_REVENUE,
+        COALESCE(AVG(o.TOTAL_AMOUNT), 0) AS AVG_ORDER_VALUE,
+        MIN(o.ORDER_DATE) AS FIRST_ORDER_DATE,
+        MAX(o.ORDER_DATE) AS LAST_ORDER_DATE,
+        DATEDIFF('day', MIN(o.ORDER_DATE), MAX(o.ORDER_DATE)) AS CUSTOMER_TENURE_DAYS
+    FROM customers c
+    LEFT JOIN orders o ON c.CUSTOMER_ID = o.CUSTOMER_ID
+    GROUP BY
+        c.CUSTOMER_ID,
+        c.CUSTOMER_NAME,
+        c.EMAIL,
+        c.CITY,
+        c.STATE,
+        c.CUSTOMER_TIER,
+        c.SIGNUP_DATE
+)
+
+SELECT * FROM customer_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "model.coco_dbt_demo.fct_customer_orders"} */;
+[0m20:01:59.049500 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m20:02:04.172067 [debug] [Thread-5 (]: SQL status: SUCCESS 12 in 5.122 seconds
+[0m20:02:04.174407 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '39038ffb-f3ac-4486-9bf2-a7e98f13b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16976c810>]}
+[0m20:02:04.174790 [info ] [Thread-5 (]: 3 of 3 OK created sql table model ANALYTICS_ANALYTICS.fct_customer_orders ...... [[32mSUCCESS 12[0m in 5.14s]
+[0m20:02:04.175073 [debug] [Thread-5 (]: Finished running node model.coco_dbt_demo.fct_customer_orders
+[0m20:02:04.175947 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:02:04.176089 [debug] [MainThread]: Connection 'model.coco_dbt_demo.stg_customers' was left open.
+[0m20:02:04.176216 [debug] [MainThread]: On model.coco_dbt_demo.stg_customers: Close
+[0m20:02:04.911654 [debug] [MainThread]: Connection 'model.coco_dbt_demo.stg_orders' was left open.
+[0m20:02:04.911970 [debug] [MainThread]: On model.coco_dbt_demo.stg_orders: Close
+[0m20:02:05.324547 [debug] [MainThread]: Connection 'model.coco_dbt_demo.fct_customer_orders' was left open.
+[0m20:02:05.324939 [debug] [MainThread]: On model.coco_dbt_demo.fct_customer_orders: Close
+[0m20:02:05.755862 [info ] [MainThread]: 
+[0m20:02:05.756355 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 10.54 seconds (10.54s).
+[0m20:02:05.757013 [debug] [MainThread]: Command end result
+[0m20:02:05.772877 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jkadakia/coco_dbt_demo/target/manifest.json
+[0m20:02:05.774126 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jkadakia/coco_dbt_demo/target/semantic_manifest.json
+[0m20:02:05.777710 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/jkadakia/coco_dbt_demo/target/run_results.json
+[0m20:02:05.777867 [info ] [MainThread]: 
+[0m20:02:05.778051 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:02:05.778184 [info ] [MainThread]: 
+[0m20:02:05.778339 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m20:02:05.781799 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.986766, "process_in_blocks": "0", "process_kernel_time": 2.895407, "process_mem_max_rss": "241893376", "process_out_blocks": "0", "process_user_time": 2.054658}
+[0m20:02:05.782069 [debug] [MainThread]: Command `dbt run` succeeded at 20:02:05.782024 after 11.99 seconds
+[0m20:02:05.782282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dc3790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11376fc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11376ec90>]}
+[0m20:02:05.782474 [debug] [MainThread]: Flushing usage events
+[0m20:02:06.016433 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:09:08.372833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11507e290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1150dd450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1150ff890>]}
+
+
+============================== 20:09:08.375631 | 952ea581-bc3a-4c74-b9a3-1b32fb6e5d26 ==============================
+[0m20:09:08.375631 [info ] [MainThread]: Running with dbt=1.11.6
+[0m20:09:08.375918 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'version_check': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'invocation_command': 'dbt run --profiles-dir .', 'introspect': 'True', 'target_path': 'None', 'empty': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'debug': 'False', 'quiet': 'False'}
+[0m20:09:09.019002 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:09:09.019311 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:09:09.019442 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:09:09.041307 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m20:09:09.147508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11481d750>]}
+[0m20:09:09.169282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113eaf510>]}
+[0m20:09:09.170085 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m20:09:09.226037 [debug] [MainThread]: checksum: ec27062d18352e9cfca161c166fcc73d2201661a23a3cf3c89196a27f32cfcb8, vars: {}, profile: , target: , version: 1.11.6
+[0m20:09:09.300901 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m20:09:09.301172 [debug] [MainThread]: Partial parsing: added file: coco_dbt_demo://macros/generate_schema_name.sql
+[0m20:09:09.302195 [info ] [MainThread]: Unable to do partial parsing because change detected to override macro. Starting full parse.
+[0m20:09:09.704551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169fcf510>]}
+[0m20:09:09.731525 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jkadakia/coco_dbt_demo/target/manifest.json
+[0m20:09:09.732819 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jkadakia/coco_dbt_demo/target/semantic_manifest.json
+[0m20:09:09.744956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169e61d10>]}
+[0m20:09:09.745199 [info ] [MainThread]: Found 3 models, 2 sources, 523 macros
+[0m20:09:09.745339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113aa1a90>]}
+[0m20:09:09.746084 [info ] [MainThread]: 
+[0m20:09:09.746216 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:09:09.746310 [info ] [MainThread]: 
+[0m20:09:09.746491 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:09:09.748272 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DBT_DEMO'
+[0m20:09:09.833458 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DBT_DEMO"
+[0m20:09:09.833704 [debug] [ThreadPool]: On list_COCO_DBT_DEMO: show terse schemas in database COCO_DBT_DEMO
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "connection_name": "list_COCO_DBT_DEMO"} */
+[0m20:09:09.833838 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:10.979892 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.146 seconds
+[0m20:09:10.981414 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_COCO_DBT_DEMO, now list_COCO_DBT_DEMO_ANALYTICS)
+[0m20:09:10.986846 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DBT_DEMO_ANALYTICS"
+[0m20:09:10.987019 [debug] [ThreadPool]: On list_COCO_DBT_DEMO_ANALYTICS: show objects in COCO_DBT_DEMO.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "connection_name": "list_COCO_DBT_DEMO_ANALYTICS"} */;
+[0m20:09:11.214867 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.228 seconds
+[0m20:09:11.216262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1150bb250>]}
+[0m20:09:11.219957 [debug] [Thread-2 (]: Began running node model.coco_dbt_demo.stg_customers
+[0m20:09:11.220234 [debug] [Thread-3 (]: Began running node model.coco_dbt_demo.stg_orders
+[0m20:09:11.220571 [info ] [Thread-2 (]: 1 of 3 START sql view model ANALYTICS.stg_customers ............................ [RUN]
+[0m20:09:11.220911 [info ] [Thread-3 (]: 2 of 3 START sql view model ANALYTICS.stg_orders ............................... [RUN]
+[0m20:09:11.221202 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DBT_DEMO_ANALYTICS, now model.coco_dbt_demo.stg_customers)
+[0m20:09:11.221467 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.coco_dbt_demo.stg_orders'
+[0m20:09:11.221668 [debug] [Thread-2 (]: Began compiling node model.coco_dbt_demo.stg_customers
+[0m20:09:11.221850 [debug] [Thread-3 (]: Began compiling node model.coco_dbt_demo.stg_orders
+[0m20:09:11.226270 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt_demo.stg_customers"
+[0m20:09:11.227684 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt_demo.stg_orders"
+[0m20:09:11.228265 [debug] [Thread-3 (]: Began executing node model.coco_dbt_demo.stg_orders
+[0m20:09:11.228452 [debug] [Thread-2 (]: Began executing node model.coco_dbt_demo.stg_customers
+[0m20:09:11.243341 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt_demo.stg_orders"
+[0m20:09:11.244736 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt_demo.stg_customers"
+[0m20:09:11.245857 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt_demo.stg_customers"
+[0m20:09:11.246339 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt_demo.stg_orders"
+[0m20:09:11.246544 [debug] [Thread-2 (]: On model.coco_dbt_demo.stg_customers: create or replace   view COCO_DBT_DEMO.ANALYTICS.stg_customers
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM COCO_DBT_DEMO.RAW.CUSTOMERS_RAW
+),
+
+deduplicated AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY CUSTOMER_ID
+            ORDER BY CREATED_AT DESC
+        ) AS row_num
+    FROM source
+),
+
+cleaned AS (
+    SELECT
+        CUSTOMER_ID,
+        CASE
+            WHEN CUSTOMER_NAME IS NULL OR TRIM(CUSTOMER_NAME) = '' THEN 'Unknown'
+            ELSE TRIM(CUSTOMER_NAME)
+        END AS CUSTOMER_NAME,
+        CASE
+            WHEN EMAIL IS NULL OR TRIM(EMAIL) = '' THEN NULL
+            ELSE LOWER(TRIM(EMAIL))
+        END AS EMAIL,
+        CASE
+            WHEN PHONE IS NULL OR TRIM(PHONE) = '' THEN NULL
+            ELSE TRIM(PHONE)
+        END AS PHONE,
+        CASE
+            WHEN ADDRESS IS NULL OR TRIM(ADDRESS) = '' THEN NULL
+            ELSE TRIM(ADDRESS)
+        END AS ADDRESS,
+        TRIM(CITY) AS CITY,
+        TRIM(STATE) AS STATE,
+        TRY_TO_DATE(SIGNUP_DATE) AS SIGNUP_DATE,
+        COALESCE(CUSTOMER_TIER, 'Unknown') AS CUSTOMER_TIER,
+        TRY_TO_TIMESTAMP(CREATED_AT) AS CREATED_AT,
+        TRY_TO_TIMESTAMP(UPDATED_AT) AS UPDATED_AT
+    FROM deduplicated
+    WHERE row_num = 1
+)
+
+SELECT * FROM cleaned
+  )
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "model.coco_dbt_demo.stg_customers"} */;
+[0m20:09:11.246777 [debug] [Thread-3 (]: On model.coco_dbt_demo.stg_orders: create or replace   view COCO_DBT_DEMO.ANALYTICS.stg_orders
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM COCO_DBT_DEMO.RAW.ORDERS_RAW
+),
+
+cleaned AS (
+    SELECT
+        ORDER_ID,
+        CUSTOMER_ID,
+        TRY_TO_DATE(ORDER_DATE) AS ORDER_DATE,
+        TRIM(PRODUCT_NAME) AS PRODUCT_NAME,
+        TRY_CAST(QUANTITY AS NUMBER) AS QUANTITY,
+        TRY_CAST(UNIT_PRICE AS NUMBER(12, 2)) AS UNIT_PRICE,
+        TRY_CAST(REPLACE(TOTAL_AMOUNT, '$', '') AS NUMBER(12, 2)) AS TOTAL_AMOUNT,
+        LOWER(TRIM(STATUS)) AS ORDER_STATUS,
+        LOWER(TRIM(SHIPPING_METHOD)) AS SHIPPING_METHOD,
+        TRY_TO_TIMESTAMP(CREATED_AT) AS CREATED_AT
+    FROM source
+)
+
+SELECT * FROM cleaned
+  )
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "model.coco_dbt_demo.stg_orders"} */;
+[0m20:09:11.247130 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:09:11.823839 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.577 seconds
+[0m20:09:11.836232 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a78bdd0>]}
+[0m20:09:11.836698 [info ] [Thread-2 (]: 1 of 3 OK created sql view model ANALYTICS.stg_customers ....................... [[32mSUCCESS 1[0m in 0.61s]
+[0m20:09:11.837007 [debug] [Thread-2 (]: Finished running node model.coco_dbt_demo.stg_customers
+[0m20:09:12.221539 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.974 seconds
+[0m20:09:12.222802 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169f82e50>]}
+[0m20:09:12.223185 [info ] [Thread-3 (]: 2 of 3 OK created sql view model ANALYTICS.stg_orders .......................... [[32mSUCCESS 1[0m in 1.00s]
+[0m20:09:12.223486 [debug] [Thread-3 (]: Finished running node model.coco_dbt_demo.stg_orders
+[0m20:09:12.223920 [debug] [Thread-5 (]: Began running node model.coco_dbt_demo.fct_customer_orders
+[0m20:09:12.224273 [info ] [Thread-5 (]: 3 of 3 START sql table model ANALYTICS.fct_customer_orders ..................... [RUN]
+[0m20:09:12.224642 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt_demo.fct_customer_orders'
+[0m20:09:12.224838 [debug] [Thread-5 (]: Began compiling node model.coco_dbt_demo.fct_customer_orders
+[0m20:09:12.226846 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt_demo.fct_customer_orders"
+[0m20:09:12.227432 [debug] [Thread-5 (]: Began executing node model.coco_dbt_demo.fct_customer_orders
+[0m20:09:12.238787 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt_demo.fct_customer_orders"
+[0m20:09:12.239913 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt_demo.fct_customer_orders"
+[0m20:09:12.240121 [debug] [Thread-5 (]: On model.coco_dbt_demo.fct_customer_orders: create or replace transient table COCO_DBT_DEMO.ANALYTICS.fct_customer_orders
+    
+    
+    
+    as (WITH customers AS (
+    SELECT * FROM COCO_DBT_DEMO.ANALYTICS.stg_customers
+),
+
+orders AS (
+    SELECT * FROM COCO_DBT_DEMO.ANALYTICS.stg_orders
+),
+
+customer_orders AS (
+    SELECT
+        c.CUSTOMER_ID,
+        c.CUSTOMER_NAME,
+        c.EMAIL,
+        c.CITY,
+        c.STATE,
+        c.CUSTOMER_TIER,
+        c.SIGNUP_DATE,
+        COUNT(o.ORDER_ID) AS TOTAL_ORDERS,
+        SUM(CASE WHEN o.ORDER_STATUS = 'delivered' THEN 1 ELSE 0 END) AS DELIVERED_ORDERS,
+        SUM(CASE WHEN o.ORDER_STATUS = 'cancelled' THEN 1 ELSE 0 END) AS CANCELLED_ORDERS,
+        SUM(CASE WHEN o.ORDER_STATUS = 'returned' THEN 1 ELSE 0 END) AS RETURNED_ORDERS,
+        COALESCE(SUM(o.TOTAL_AMOUNT), 0) AS LIFETIME_REVENUE,
+        COALESCE(AVG(o.TOTAL_AMOUNT), 0) AS AVG_ORDER_VALUE,
+        MIN(o.ORDER_DATE) AS FIRST_ORDER_DATE,
+        MAX(o.ORDER_DATE) AS LAST_ORDER_DATE,
+        DATEDIFF('day', MIN(o.ORDER_DATE), MAX(o.ORDER_DATE)) AS CUSTOMER_TENURE_DAYS
+    FROM customers c
+    LEFT JOIN orders o ON c.CUSTOMER_ID = o.CUSTOMER_ID
+    GROUP BY
+        c.CUSTOMER_ID,
+        c.CUSTOMER_NAME,
+        c.EMAIL,
+        c.CITY,
+        c.STATE,
+        c.CUSTOMER_TIER,
+        c.SIGNUP_DATE
+)
+
+SELECT * FROM customer_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "model.coco_dbt_demo.fct_customer_orders"} */;
+[0m20:09:12.240314 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m20:09:15.169617 [debug] [Thread-5 (]: SQL status: SUCCESS 12 in 2.929 seconds
+[0m20:09:15.170544 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '952ea581-bc3a-4c74-b9a3-1b32fb6e5d26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a6f0950>]}
+[0m20:09:15.170822 [info ] [Thread-5 (]: 3 of 3 OK created sql table model ANALYTICS.fct_customer_orders ................ [[32mSUCCESS 12[0m in 2.95s]
+[0m20:09:15.171061 [debug] [Thread-5 (]: Finished running node model.coco_dbt_demo.fct_customer_orders
+[0m20:09:15.171728 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:09:15.171902 [debug] [MainThread]: Connection 'model.coco_dbt_demo.stg_customers' was left open.
+[0m20:09:15.172154 [debug] [MainThread]: On model.coco_dbt_demo.stg_customers: Close
+[0m20:09:15.574540 [debug] [MainThread]: Connection 'model.coco_dbt_demo.stg_orders' was left open.
+[0m20:09:15.574922 [debug] [MainThread]: On model.coco_dbt_demo.stg_orders: Close
+[0m20:09:15.980703 [debug] [MainThread]: Connection 'model.coco_dbt_demo.fct_customer_orders' was left open.
+[0m20:09:15.981044 [debug] [MainThread]: On model.coco_dbt_demo.fct_customer_orders: Close
+[0m20:09:16.372970 [info ] [MainThread]: 
+[0m20:09:16.373421 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 6.63 seconds (6.63s).
+[0m20:09:16.374053 [debug] [MainThread]: Command end result
+[0m20:09:16.389708 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jkadakia/coco_dbt_demo/target/manifest.json
+[0m20:09:16.390845 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jkadakia/coco_dbt_demo/target/semantic_manifest.json
+[0m20:09:16.393994 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/jkadakia/coco_dbt_demo/target/run_results.json
+[0m20:09:16.394152 [info ] [MainThread]: 
+[0m20:09:16.394347 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:09:16.394484 [info ] [MainThread]: 
+[0m20:09:16.394641 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m20:09:16.398496 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.081567, "process_in_blocks": "0", "process_kernel_time": 2.955578, "process_mem_max_rss": "240631808", "process_out_blocks": "0", "process_user_time": 2.156147}
+[0m20:09:16.398741 [debug] [MainThread]: Command `dbt run` succeeded at 20:09:16.398700 after 8.08 seconds
+[0m20:09:16.398945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1150ddb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1150dd610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11506f990>]}
+[0m20:09:16.399138 [debug] [MainThread]: Flushing usage events
+[0m20:09:16.710922 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:10:33.588470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108daa610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e09410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e08110>]}
+
+
+============================== 20:10:33.591379 | fbc98e2c-0c9a-4aef-9426-3f78888ab2f0 ==============================
+[0m20:10:33.591379 [info ] [MainThread]: Running with dbt=1.11.6
+[0m20:10:33.591656 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'indirect_selection': 'eager', 'target_path': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/Users/jkadakia/coco_dbt_demo/logs', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'no_print': 'None', 'printer_width': '80', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'write_json': 'True', 'use_colors': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'version_check': 'True'}
+[0m20:10:34.294847 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:10:34.295147 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:10:34.295292 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:10:34.317204 [debug] [MainThread]: Snowflake adapter: Replaced underscores (_) with hyphens (-) in Snowflake account name to form a valid account URL.
+[0m20:10:34.430906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087fa110>]}
+[0m20:10:34.452024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fdb2d0>]}
+[0m20:10:34.452785 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m20:10:34.506794 [debug] [MainThread]: checksum: ec27062d18352e9cfca161c166fcc73d2201661a23a3cf3c89196a27f32cfcb8, vars: {}, profile: , target: , version: 1.11.6
+[0m20:10:34.583845 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m20:10:34.584150 [debug] [MainThread]: Partial parsing: added file: coco_dbt_demo://models/marts/schema.yml
+[0m20:10:34.584318 [debug] [MainThread]: Partial parsing: added file: coco_dbt_demo://models/staging/schema.yml
+[0m20:10:34.652453 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'stg_customers'
+in package 'coco_dbt_demo' (models/staging/schema.yml). Arguments to generic
+tests should be nested under the `arguments` property.
+[0m20:10:34.652778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15201a450>]}
+[0m20:10:34.700530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1522b6e50>]}
+[0m20:10:34.737096 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jkadakia/coco_dbt_demo/target/manifest.json
+[0m20:10:34.738484 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jkadakia/coco_dbt_demo/target/semantic_manifest.json
+[0m20:10:34.756174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1524c5e10>]}
+[0m20:10:34.756417 [info ] [MainThread]: Found 3 models, 17 data tests, 2 sources, 523 macros
+[0m20:10:34.756549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1520d7a50>]}
+[0m20:10:34.757544 [info ] [MainThread]: 
+[0m20:10:34.757688 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:10:34.757785 [info ] [MainThread]: 
+[0m20:10:34.757966 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:10:34.759713 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DBT_DEMO_ANALYTICS'
+[0m20:10:34.813572 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DBT_DEMO_ANALYTICS"
+[0m20:10:34.813785 [debug] [ThreadPool]: On list_COCO_DBT_DEMO_ANALYTICS: show objects in COCO_DBT_DEMO.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "connection_name": "list_COCO_DBT_DEMO_ANALYTICS"} */;
+[0m20:10:34.813904 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:10:35.853801 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.040 seconds
+[0m20:10:35.855497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fbc98e2c-0c9a-4aef-9426-3f78888ab2f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x152099a50>]}
+[0m20:10:35.857866 [debug] [Thread-2 (]: Began running node test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80
+[0m20:10:35.858079 [debug] [Thread-3 (]: Began running node test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9
+[0m20:10:35.858309 [debug] [Thread-4 (]: Began running node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312
+[0m20:10:35.858491 [debug] [Thread-5 (]: Began running node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392
+[0m20:10:35.858683 [info ] [Thread-2 (]: 1 of 17 START test accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown  [RUN]
+[0m20:10:35.858910 [info ] [Thread-3 (]: 2 of 17 START test accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned  [RUN]
+[0m20:10:35.859107 [info ] [Thread-4 (]: 3 of 17 START test not_null_fct_customer_orders_CUSTOMER_ID .................... [RUN]
+[0m20:10:35.859293 [info ] [Thread-5 (]: 4 of 17 START test not_null_fct_customer_orders_CUSTOMER_TIER .................. [RUN]
+[0m20:10:35.859537 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DBT_DEMO_ANALYTICS, now test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80)
+[0m20:10:35.859807 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9'
+[0m20:10:35.860276 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312'
+[0m20:10:35.860516 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392'
+[0m20:10:35.860701 [debug] [Thread-2 (]: Began compiling node test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80
+[0m20:10:35.860886 [debug] [Thread-3 (]: Began compiling node test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9
+[0m20:10:35.861055 [debug] [Thread-4 (]: Began compiling node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312
+[0m20:10:35.861223 [debug] [Thread-5 (]: Began compiling node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392
+[0m20:10:35.865855 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80"
+[0m20:10:35.868824 [debug] [Thread-3 (]: Writing injected SQL for node "test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9"
+[0m20:10:35.872413 [debug] [Thread-4 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312"
+[0m20:10:35.874010 [debug] [Thread-5 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392"
+[0m20:10:35.875754 [debug] [Thread-3 (]: Began executing node test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9
+[0m20:10:35.875916 [debug] [Thread-5 (]: Began executing node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392
+[0m20:10:35.876061 [debug] [Thread-2 (]: Began executing node test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80
+[0m20:10:35.885573 [debug] [Thread-3 (]: Writing runtime sql for node "test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9"
+[0m20:10:35.885869 [debug] [Thread-4 (]: Began executing node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312
+[0m20:10:35.887103 [debug] [Thread-5 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392"
+[0m20:10:35.888122 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80"
+[0m20:10:35.889220 [debug] [Thread-4 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312"
+[0m20:10:35.890102 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80"
+[0m20:10:35.890495 [debug] [Thread-3 (]: Using snowflake connection "test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9"
+[0m20:10:35.890735 [debug] [Thread-2 (]: On test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        CUSTOMER_TIER as value_field,
+        count(*) as n_records
+
+    from COCO_DBT_DEMO.ANALYTICS.stg_customers
+    group by CUSTOMER_TIER
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Gold','Silver','Bronze','Platinum','Unknown'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80"} */
+[0m20:10:35.891066 [debug] [Thread-5 (]: Using snowflake connection "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392"
+[0m20:10:35.891231 [debug] [Thread-3 (]: On test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        ORDER_STATUS as value_field,
+        count(*) as n_records
+
+    from COCO_DBT_DEMO.ANALYTICS.stg_orders
+    group by ORDER_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'delivered','shipped','pending','cancelled','returned'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9"} */
+[0m20:10:35.891514 [debug] [Thread-4 (]: Using snowflake connection "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312"
+[0m20:10:35.891860 [debug] [Thread-5 (]: On test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select CUSTOMER_TIER
+from COCO_DBT_DEMO.ANALYTICS.fct_customer_orders
+where CUSTOMER_TIER is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392"} */
+[0m20:10:35.892171 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:10:35.892528 [debug] [Thread-4 (]: On test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select CUSTOMER_ID
+from COCO_DBT_DEMO.ANALYTICS.fct_customer_orders
+where CUSTOMER_ID is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312"} */
+[0m20:10:35.892728 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m20:10:35.893181 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:10:36.208065 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.316 seconds
+[0m20:10:36.212964 [info ] [Thread-2 (]: 1 of 17 PASS accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown  [[32mPASS[0m in 0.35s]
+[0m20:10:36.213281 [debug] [Thread-2 (]: Finished running node test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80
+[0m20:10:36.213458 [debug] [Thread-2 (]: Began running node test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb
+[0m20:10:36.213684 [info ] [Thread-2 (]: 5 of 17 START test not_null_fct_customer_orders_LIFETIME_REVENUE ............... [RUN]
+[0m20:10:36.213861 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.accepted_values_stg_customers_CUSTOMER_TIER__Gold__Silver__Bronze__Platinum__Unknown.a218281a80, now test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb)
+[0m20:10:36.214020 [debug] [Thread-2 (]: Began compiling node test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb
+[0m20:10:36.215860 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb"
+[0m20:10:36.216930 [debug] [Thread-2 (]: Began executing node test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb
+[0m20:10:36.218094 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb"
+[0m20:10:36.219241 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb"
+[0m20:10:36.219425 [debug] [Thread-2 (]: On test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select LIFETIME_REVENUE
+from COCO_DBT_DEMO.ANALYTICS.fct_customer_orders
+where LIFETIME_REVENUE is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb"} */
+[0m20:10:36.490110 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.270 seconds
+[0m20:10:36.491103 [info ] [Thread-2 (]: 5 of 17 PASS not_null_fct_customer_orders_LIFETIME_REVENUE ..................... [[32mPASS[0m in 0.28s]
+[0m20:10:36.491373 [debug] [Thread-2 (]: Finished running node test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb
+[0m20:10:36.491551 [debug] [Thread-2 (]: Began running node test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123
+[0m20:10:36.491808 [info ] [Thread-2 (]: 6 of 17 START test not_null_fct_customer_orders_TOTAL_ORDERS ................... [RUN]
+[0m20:10:36.492063 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_fct_customer_orders_LIFETIME_REVENUE.c094eaa4bb, now test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123)
+[0m20:10:36.492234 [debug] [Thread-2 (]: Began compiling node test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123
+[0m20:10:36.494161 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123"
+[0m20:10:36.495467 [debug] [Thread-2 (]: Began executing node test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123
+[0m20:10:36.496527 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123"
+[0m20:10:36.497278 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123"
+[0m20:10:36.497482 [debug] [Thread-2 (]: On test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select TOTAL_ORDERS
+from COCO_DBT_DEMO.ANALYTICS.fct_customer_orders
+where TOTAL_ORDERS is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123"} */
+[0m20:10:36.730731 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.233 seconds
+[0m20:10:36.731608 [info ] [Thread-2 (]: 6 of 17 PASS not_null_fct_customer_orders_TOTAL_ORDERS ......................... [[32mPASS[0m in 0.24s]
+[0m20:10:36.731863 [debug] [Thread-2 (]: Finished running node test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123
+[0m20:10:36.732024 [debug] [Thread-2 (]: Began running node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3
+[0m20:10:36.732250 [info ] [Thread-2 (]: 7 of 17 START test not_null_stg_customers_CUSTOMER_ID .......................... [RUN]
+[0m20:10:36.732481 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_fct_customer_orders_TOTAL_ORDERS.630e70d123, now test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3)
+[0m20:10:36.732638 [debug] [Thread-2 (]: Began compiling node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3
+[0m20:10:36.734619 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3"
+[0m20:10:36.735912 [debug] [Thread-2 (]: Began executing node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3
+[0m20:10:36.736949 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3"
+[0m20:10:36.737985 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3"
+[0m20:10:36.738176 [debug] [Thread-2 (]: On test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select CUSTOMER_ID
+from COCO_DBT_DEMO.ANALYTICS.stg_customers
+where CUSTOMER_ID is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3"} */
+[0m20:10:36.933994 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.041 seconds
+[0m20:10:36.934881 [info ] [Thread-4 (]: 3 of 17 PASS not_null_fct_customer_orders_CUSTOMER_ID .......................... [[32mPASS[0m in 1.07s]
+[0m20:10:36.935131 [debug] [Thread-4 (]: Finished running node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312
+[0m20:10:36.935295 [debug] [Thread-4 (]: Began running node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029
+[0m20:10:36.935518 [info ] [Thread-4 (]: 8 of 17 START test not_null_stg_customers_CUSTOMER_NAME ........................ [RUN]
+[0m20:10:36.935731 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_ID.8d3cd29312, now test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029)
+[0m20:10:36.935899 [debug] [Thread-4 (]: Began compiling node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029
+[0m20:10:36.937860 [debug] [Thread-4 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029"
+[0m20:10:36.938702 [debug] [Thread-4 (]: Began executing node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029
+[0m20:10:36.939753 [debug] [Thread-4 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029"
+[0m20:10:36.940459 [debug] [Thread-4 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029"
+[0m20:10:36.940616 [debug] [Thread-4 (]: On test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select CUSTOMER_NAME
+from COCO_DBT_DEMO.ANALYTICS.stg_customers
+where CUSTOMER_NAME is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029"} */
+[0m20:10:36.992932 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.100 seconds
+[0m20:10:36.993967 [info ] [Thread-5 (]: 4 of 17 PASS not_null_fct_customer_orders_CUSTOMER_TIER ........................ [[32mPASS[0m in 1.13s]
+[0m20:10:36.994230 [debug] [Thread-5 (]: Finished running node test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392
+[0m20:10:36.994385 [debug] [Thread-5 (]: Began running node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4
+[0m20:10:36.994564 [info ] [Thread-5 (]: 9 of 17 START test not_null_stg_customers_CUSTOMER_TIER ........................ [RUN]
+[0m20:10:36.994790 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_fct_customer_orders_CUSTOMER_TIER.53b0da5392, now test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4)
+[0m20:10:36.994968 [debug] [Thread-5 (]: Began compiling node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4
+[0m20:10:36.996903 [debug] [Thread-5 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4"
+[0m20:10:36.998654 [debug] [Thread-5 (]: Began executing node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4
+[0m20:10:36.999699 [debug] [Thread-5 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4"
+[0m20:10:37.000463 [debug] [Thread-5 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4"
+[0m20:10:37.000624 [debug] [Thread-5 (]: On test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select CUSTOMER_TIER
+from COCO_DBT_DEMO.ANALYTICS.stg_customers
+where CUSTOMER_TIER is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4"} */
+[0m20:10:37.021438 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.283 seconds
+[0m20:10:37.022392 [info ] [Thread-2 (]: 7 of 17 PASS not_null_stg_customers_CUSTOMER_ID ................................ [[32mPASS[0m in 0.29s]
+[0m20:10:37.022642 [debug] [Thread-2 (]: Finished running node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3
+[0m20:10:37.022796 [debug] [Thread-2 (]: Began running node test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32
+[0m20:10:37.022976 [info ] [Thread-2 (]: 10 of 17 START test not_null_stg_orders_CUSTOMER_ID ............................ [RUN]
+[0m20:10:37.023183 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_ID.2ac213e7d3, now test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32)
+[0m20:10:37.023331 [debug] [Thread-2 (]: Began compiling node test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32
+[0m20:10:37.025144 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32"
+[0m20:10:37.026399 [debug] [Thread-2 (]: Began executing node test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32
+[0m20:10:37.027458 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32"
+[0m20:10:37.028638 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32"
+[0m20:10:37.028812 [debug] [Thread-2 (]: On test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select CUSTOMER_ID
+from COCO_DBT_DEMO.ANALYTICS.stg_orders
+where CUSTOMER_ID is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32"} */
+[0m20:10:38.259817 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.368 seconds
+[0m20:10:38.261174 [info ] [Thread-3 (]: 2 of 17 PASS accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned  [[32mPASS[0m in 2.40s]
+[0m20:10:38.261662 [debug] [Thread-3 (]: Finished running node test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9
+[0m20:10:38.261965 [debug] [Thread-3 (]: Began running node test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9
+[0m20:10:38.262379 [info ] [Thread-3 (]: 11 of 17 START test not_null_stg_orders_ORDER_DATE ............................. [RUN]
+[0m20:10:38.262761 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.accepted_values_stg_orders_ORDER_STATUS__delivered__shipped__pending__cancelled__returned.447a6f5ec9, now test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9)
+[0m20:10:38.263021 [debug] [Thread-3 (]: Began compiling node test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9
+[0m20:10:38.265211 [debug] [Thread-3 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9"
+[0m20:10:38.266545 [debug] [Thread-3 (]: Began executing node test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9
+[0m20:10:38.267647 [debug] [Thread-3 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9"
+[0m20:10:38.268374 [debug] [Thread-3 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9"
+[0m20:10:38.268541 [debug] [Thread-3 (]: On test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ORDER_DATE
+from COCO_DBT_DEMO.ANALYTICS.stg_orders
+where ORDER_DATE is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9"} */
+[0m20:10:38.274804 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.334 seconds
+[0m20:10:38.275991 [info ] [Thread-4 (]: 8 of 17 PASS not_null_stg_customers_CUSTOMER_NAME .............................. [[32mPASS[0m in 1.34s]
+[0m20:10:38.276321 [debug] [Thread-4 (]: Finished running node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029
+[0m20:10:38.276497 [debug] [Thread-4 (]: Began running node test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e
+[0m20:10:38.276687 [info ] [Thread-4 (]: 12 of 17 START test not_null_stg_orders_ORDER_ID ............................... [RUN]
+[0m20:10:38.276887 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_NAME.fe59e56029, now test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e)
+[0m20:10:38.277071 [debug] [Thread-4 (]: Began compiling node test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e
+[0m20:10:38.279180 [debug] [Thread-4 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e"
+[0m20:10:38.280318 [debug] [Thread-4 (]: Began executing node test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e
+[0m20:10:38.281753 [debug] [Thread-4 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e"
+[0m20:10:38.282759 [debug] [Thread-4 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e"
+[0m20:10:38.282938 [debug] [Thread-4 (]: On test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ORDER_ID
+from COCO_DBT_DEMO.ANALYTICS.stg_orders
+where ORDER_ID is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e"} */
+[0m20:10:38.293231 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.292 seconds
+[0m20:10:38.294208 [info ] [Thread-5 (]: 9 of 17 PASS not_null_stg_customers_CUSTOMER_TIER .............................. [[32mPASS[0m in 1.30s]
+[0m20:10:38.294477 [debug] [Thread-5 (]: Finished running node test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4
+[0m20:10:38.294646 [debug] [Thread-5 (]: Began running node test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5
+[0m20:10:38.294817 [info ] [Thread-5 (]: 13 of 17 START test not_null_stg_orders_TOTAL_AMOUNT ........................... [RUN]
+[0m20:10:38.294984 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_customers_CUSTOMER_TIER.e533254ff4, now test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5)
+[0m20:10:38.295127 [debug] [Thread-5 (]: Began compiling node test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5
+[0m20:10:38.296999 [debug] [Thread-5 (]: Writing injected SQL for node "test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5"
+[0m20:10:38.297599 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.269 seconds
+[0m20:10:38.298365 [info ] [Thread-2 (]: 10 of 17 PASS not_null_stg_orders_CUSTOMER_ID .................................. [[32mPASS[0m in 1.28s]
+[0m20:10:38.298623 [debug] [Thread-2 (]: Finished running node test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32
+[0m20:10:38.298791 [debug] [Thread-2 (]: Began running node test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4
+[0m20:10:38.299150 [info ] [Thread-2 (]: 14 of 17 START test relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_  [RUN]
+[0m20:10:38.299363 [debug] [Thread-5 (]: Began executing node test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5
+[0m20:10:38.299564 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_orders_CUSTOMER_ID.1f7e0e5c32, now test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4)
+[0m20:10:38.302058 [debug] [Thread-5 (]: Writing runtime sql for node "test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5"
+[0m20:10:38.302263 [debug] [Thread-2 (]: Began compiling node test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4
+[0m20:10:38.304434 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4"
+[0m20:10:38.304964 [debug] [Thread-5 (]: Using snowflake connection "test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5"
+[0m20:10:38.305169 [debug] [Thread-5 (]: On test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select TOTAL_AMOUNT
+from COCO_DBT_DEMO.ANALYTICS.stg_orders
+where TOTAL_AMOUNT is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5"} */
+[0m20:10:38.305553 [debug] [Thread-2 (]: Began executing node test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4
+[0m20:10:38.306618 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4"
+[0m20:10:38.307768 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4"
+[0m20:10:38.307960 [debug] [Thread-2 (]: On test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select CUSTOMER_ID as from_field
+    from COCO_DBT_DEMO.ANALYTICS.stg_orders
+    where CUSTOMER_ID is not null
+),
+
+parent as (
+    select CUSTOMER_ID as to_field
+    from COCO_DBT_DEMO.ANALYTICS.stg_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4"} */
+[0m20:10:39.425549 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.142 seconds
+[0m20:10:39.426108 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.157 seconds
+[0m20:10:39.427465 [info ] [Thread-4 (]: 12 of 17 PASS not_null_stg_orders_ORDER_ID ..................................... [[32mPASS[0m in 1.15s]
+[0m20:10:39.428500 [info ] [Thread-3 (]: 11 of 17 PASS not_null_stg_orders_ORDER_DATE ................................... [[32mPASS[0m in 1.17s]
+[0m20:10:39.428855 [debug] [Thread-4 (]: Finished running node test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e
+[0m20:10:39.429137 [debug] [Thread-3 (]: Finished running node test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9
+[0m20:10:39.429369 [debug] [Thread-4 (]: Began running node test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0
+[0m20:10:39.429663 [debug] [Thread-3 (]: Began running node test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914
+[0m20:10:39.429980 [info ] [Thread-4 (]: 15 of 17 START test unique_fct_customer_orders_CUSTOMER_ID ..................... [RUN]
+[0m20:10:39.430231 [info ] [Thread-3 (]: 16 of 17 START test unique_stg_customers_CUSTOMER_ID ........................... [RUN]
+[0m20:10:39.430498 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_orders_ORDER_ID.40ef3f7f7e, now test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0)
+[0m20:10:39.430713 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_orders_ORDER_DATE.4df43584c9, now test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914)
+[0m20:10:39.430906 [debug] [Thread-4 (]: Began compiling node test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0
+[0m20:10:39.431087 [debug] [Thread-3 (]: Began compiling node test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914
+[0m20:10:39.434881 [debug] [Thread-4 (]: Writing injected SQL for node "test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0"
+[0m20:10:39.436864 [debug] [Thread-3 (]: Writing injected SQL for node "test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914"
+[0m20:10:39.438475 [debug] [Thread-3 (]: Began executing node test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914
+[0m20:10:39.438683 [debug] [Thread-4 (]: Began executing node test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0
+[0m20:10:39.439964 [debug] [Thread-3 (]: Writing runtime sql for node "test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914"
+[0m20:10:39.441105 [debug] [Thread-4 (]: Writing runtime sql for node "test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0"
+[0m20:10:39.442252 [debug] [Thread-3 (]: Using snowflake connection "test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914"
+[0m20:10:39.442641 [debug] [Thread-4 (]: Using snowflake connection "test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0"
+[0m20:10:39.442823 [debug] [Thread-3 (]: On test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    CUSTOMER_ID as unique_field,
+    count(*) as n_records
+
+from COCO_DBT_DEMO.ANALYTICS.stg_customers
+where CUSTOMER_ID is not null
+group by CUSTOMER_ID
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914"} */
+[0m20:10:39.443028 [debug] [Thread-4 (]: On test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    CUSTOMER_ID as unique_field,
+    count(*) as n_records
+
+from COCO_DBT_DEMO.ANALYTICS.fct_customer_orders
+where CUSTOMER_ID is not null
+group by CUSTOMER_ID
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0"} */
+[0m20:10:39.487404 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.182 seconds
+[0m20:10:39.488379 [info ] [Thread-5 (]: 13 of 17 PASS not_null_stg_orders_TOTAL_AMOUNT ................................. [[32mPASS[0m in 1.19s]
+[0m20:10:39.488630 [debug] [Thread-5 (]: Finished running node test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5
+[0m20:10:39.488803 [debug] [Thread-5 (]: Began running node test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289
+[0m20:10:39.489004 [info ] [Thread-5 (]: 17 of 17 START test unique_stg_orders_ORDER_ID ................................. [RUN]
+[0m20:10:39.489243 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.coco_dbt_demo.not_null_stg_orders_TOTAL_AMOUNT.9f6afc40c5, now test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289)
+[0m20:10:39.489402 [debug] [Thread-5 (]: Began compiling node test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289
+[0m20:10:39.491533 [debug] [Thread-5 (]: Writing injected SQL for node "test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289"
+[0m20:10:39.491879 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.184 seconds
+[0m20:10:39.492685 [info ] [Thread-2 (]: 14 of 17 PASS relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_  [[32mPASS[0m in 1.19s]
+[0m20:10:39.492912 [debug] [Thread-2 (]: Finished running node test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4
+[0m20:10:39.493186 [debug] [Thread-5 (]: Began executing node test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289
+[0m20:10:39.494231 [debug] [Thread-5 (]: Writing runtime sql for node "test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289"
+[0m20:10:39.495234 [debug] [Thread-5 (]: Using snowflake connection "test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289"
+[0m20:10:39.495386 [debug] [Thread-5 (]: On test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    ORDER_ID as unique_field,
+    count(*) as n_records
+
+from COCO_DBT_DEMO.ANALYTICS.stg_orders
+where ORDER_ID is not null
+group by ORDER_ID
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "coco_dbt_demo", "target_name": "dev", "node_id": "test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289"} */
+[0m20:10:39.746744 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.303 seconds
+[0m20:10:39.747855 [info ] [Thread-4 (]: 15 of 17 PASS unique_fct_customer_orders_CUSTOMER_ID ........................... [[32mPASS[0m in 0.32s]
+[0m20:10:39.748164 [debug] [Thread-4 (]: Finished running node test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0
+[0m20:10:39.797377 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.302 seconds
+[0m20:10:39.798432 [info ] [Thread-5 (]: 17 of 17 PASS unique_stg_orders_ORDER_ID ....................................... [[32mPASS[0m in 0.31s]
+[0m20:10:39.798689 [debug] [Thread-5 (]: Finished running node test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289
+[0m20:10:40.714023 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.271 seconds
+[0m20:10:40.715230 [info ] [Thread-3 (]: 16 of 17 PASS unique_stg_customers_CUSTOMER_ID ................................. [[32mPASS[0m in 1.28s]
+[0m20:10:40.715535 [debug] [Thread-3 (]: Finished running node test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914
+[0m20:10:40.716379 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:10:40.716583 [debug] [MainThread]: Connection 'test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4' was left open.
+[0m20:10:40.716742 [debug] [MainThread]: On test.coco_dbt_demo.relationships_stg_orders_CUSTOMER_ID__CUSTOMER_ID__ref_stg_customers_.a53df91bc4: Close
+[0m20:10:41.083846 [debug] [MainThread]: Connection 'test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914' was left open.
+[0m20:10:41.084272 [debug] [MainThread]: On test.coco_dbt_demo.unique_stg_customers_CUSTOMER_ID.297690f914: Close
+[0m20:10:41.466925 [debug] [MainThread]: Connection 'test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0' was left open.
+[0m20:10:41.467291 [debug] [MainThread]: On test.coco_dbt_demo.unique_fct_customer_orders_CUSTOMER_ID.fc9ccaa1e0: Close
+[0m20:10:41.818978 [debug] [MainThread]: Connection 'test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289' was left open.
+[0m20:10:41.819362 [debug] [MainThread]: On test.coco_dbt_demo.unique_stg_orders_ORDER_ID.2dd174a289: Close
+[0m20:10:42.192290 [info ] [MainThread]: 
+[0m20:10:42.192675 [info ] [MainThread]: Finished running 17 data tests in 0 hours 0 minutes and 7.43 seconds (7.43s).
+[0m20:10:42.193853 [debug] [MainThread]: Command end result
+[0m20:10:42.210135 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jkadakia/coco_dbt_demo/target/manifest.json
+[0m20:10:42.211221 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jkadakia/coco_dbt_demo/target/semantic_manifest.json
+[0m20:10:42.214590 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/jkadakia/coco_dbt_demo/target/run_results.json
+[0m20:10:42.214758 [info ] [MainThread]: 
+[0m20:10:42.214921 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:10:42.215047 [info ] [MainThread]: 
+[0m20:10:42.215170 [info ] [MainThread]: Done. PASS=17 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=17
+[0m20:10:42.215424 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 3 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m20:10:42.218734 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 8.679398, "process_in_blocks": "0", "process_kernel_time": 2.905598, "process_mem_max_rss": "240844800", "process_out_blocks": "0", "process_user_time": 1.994639}
+[0m20:10:42.218956 [debug] [MainThread]: Command `dbt test` succeeded at 20:10:42.218919 after 8.68 seconds
+[0m20:10:42.219126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e23250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e22d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c3b790>]}
+[0m20:10:42.219283 [debug] [MainThread]: Flushing usage events
+[0m20:10:42.464269 [debug] [MainThread]: An error was encountered while trying to flush usage events

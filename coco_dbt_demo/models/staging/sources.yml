@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: COCO_DBT_DEMO
+    schema: RAW
+    tables:
+      - name: CUSTOMERS_RAW
+        description: "Raw customer data with known quality issues: NULLs, duplicates, inconsistent date formats"
+      - name: ORDERS_RAW
+        description: "Raw order data with known quality issues: currency symbols in amounts, inconsistent statuses"

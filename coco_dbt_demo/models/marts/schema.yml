@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_customer_orders
+    description: "Customer-level order summary combining customer attributes with aggregated order metrics. One row per customer."
+    columns:
+      - name: CUSTOMER_ID
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: TOTAL_ORDERS
+        description: "Total number of orders placed by the customer"
+        tests:
+          - not_null
+      - name: LIFETIME_REVENUE
+        description: "Total revenue from all orders"
+        tests:
+          - not_null
+      - name: CUSTOMER_TIER
+        description: "Customer tier level"
+        tests:
+          - not_null
